@@ -12,9 +12,7 @@ import java.util.Date;
  * KategoriId
  */
 @Entity
-@Table(
-        name = "URUN"
-)
+@Table(name = "URUN")
 public class Urun {
 
     @SequenceGenerator(name = "generator", sequenceName = "URUN_ID_SEQ")
