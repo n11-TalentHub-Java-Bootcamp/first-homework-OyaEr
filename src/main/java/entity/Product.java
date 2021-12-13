@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "URUN")
@@ -29,6 +30,7 @@ public class Product {
             foreignKey = @ForeignKey(name = "FK_URUN_KATEGORI_ID")
     )
     private Category category;
+
 
     public Long getId() {
         return id;

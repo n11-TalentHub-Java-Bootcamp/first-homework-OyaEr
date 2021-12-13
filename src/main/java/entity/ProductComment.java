@@ -3,7 +3,6 @@ package entity;
 import javax.persistence.*;
 import java.util.Date;
 
-
 @Entity
 @Table(name="URUN_YORUM")
 public class ProductComment {
@@ -20,6 +19,22 @@ public class ProductComment {
     @Temporal(TemporalType.DATE)
     @Column(name="YORUM_TARIHI", nullable = false, length = 500)
     private Date commentDate;
+
+    @ManyToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            optional = false
+    )
+    @JoinColumn (name = "URUN_ID" , foreignKey = @ForeignKey (name = "FK_URUN_URUN_YORUM_ID"))
+    private Product productId;
+
+    @ManyToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            optional = false
+    )
+    @JoinColumn (name = "KULLANICI_ID" , foreignKey = @ForeignKey (name = "FK_KULLANICI_URUN_YORUM_ID"))
+    private User userId;
 
     public Long getId() {
         return id;
