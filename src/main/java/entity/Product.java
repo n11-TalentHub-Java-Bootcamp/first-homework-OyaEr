@@ -4,16 +4,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * id
- * adi
- * fiyat
- * kayitTarihi
- * KategoriId
- */
 @Entity
 @Table(name = "URUN")
-public class Urun {
+public class Product {
 
     @SequenceGenerator(name = "generator", sequenceName = "URUN_ID_SEQ")
     @Id
@@ -22,20 +15,20 @@ public class Urun {
     private Long id;
 
     @Column(length = 50, name = "ADI")
-    private String adi;
+    private String name;
 
     @Column(name = "FIYAT" , precision = 19, scale = 2)
-    private BigDecimal fiyat;
+    private BigDecimal price;
 
     @Column(name = "KAYIT_TARIHI")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date kayitTarihi;
+    private Date recordDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_KATEGORI",
             foreignKey = @ForeignKey(name = "FK_URUN_KATEGORI_ID")
     )
-    private Kategori kategori;
+    private Category category;
 
     public Long getId() {
         return id;
@@ -45,46 +38,46 @@ public class Urun {
         this.id = id;
     }
 
-    public String getAdi() {
-        return adi;
+    public String getName() {
+        return name;
     }
 
-    public void setAdi(String adi) {
-        this.adi = adi;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public BigDecimal getFiyat() {
-        return fiyat;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setFiyat(BigDecimal fiyat) {
-        this.fiyat = fiyat;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
-    public Date getKayitTarihi() {
-        return kayitTarihi;
+    public Date getRecordDate() {
+        return recordDate;
     }
 
-    public void setKayitTarihi(Date kayitTarihi) {
-        this.kayitTarihi = kayitTarihi;
+    public void setRecordDate(Date recordDate) {
+        this.recordDate = recordDate;
     }
 
-    public Kategori getKategori() {
-        return kategori;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setKategori(Kategori kategori) {
-        this.kategori = kategori;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Override
     public String toString() {
         return "Urun{" +
                 "id=" + id +
-                ", adi='" + adi + '\'' +
-                ", fiyat=" + fiyat +
-                ", kayitTarihi=" + kayitTarihi +
-                ", kategori=" + kategori +
+                ", adi='" + name + '\'' +
+                ", fiyat=" + price +
+                ", kayitTarihi=" + recordDate +
+                ", kategori=" + category +
                 '}';
     }
 }

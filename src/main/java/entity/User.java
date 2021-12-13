@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="KULLANICI")
-public class Kullanici {
+public class User {
 
     @SequenceGenerator(name = "generator", sequenceName = "KULLANICI_ID_SEQ")
     @Id
@@ -13,16 +13,16 @@ public class Kullanici {
     private Long id;
 
     @Column(name = "ADI", nullable = false, length = 50)
-    private String adi;
+    private String name;
 
     @Column(name="SOYADI", nullable = false, length = 50)
-    private String soyadi;
+    private String surname;
 
     @Column(name="EMAIL", nullable = false, length = 50)
     private String email;
 
     @Column(name="TELEFON", nullable = false, length = 50)
-    private String telefon;
+    private String phoneNumber;
 
     public Long getId() {
         return id;
@@ -32,20 +32,20 @@ public class Kullanici {
         this.id = id;
     }
 
-    public String getAdi() {
-        return adi;
+    public String getName() {
+        return name;
     }
 
-    public void setAdi(String adi) {
-        this.adi = adi;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSoyadi() {
-        return soyadi;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSoyadi(String soyadi) {
-        this.soyadi = soyadi;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getEmail() {
@@ -56,22 +56,22 @@ public class Kullanici {
         this.email = email;
     }
 
-    public String getTelefon() {
-        return telefon;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
     public String toString() {
         return "Kullanici{" +
                 "id=" + id +
-                ", adi='" + adi + '\'' +
-                ", soyadi='" + soyadi + '\'' +
+                ", adi='" + name + '\'' +
+                ", soyadi='" + surname + '\'' +
                 ", email='" + email + '\'' +
-                ", telefon='" + telefon + '\'' +
+                ", telefon='" + phoneNumber + '\'' +
                 '}';
     }
 

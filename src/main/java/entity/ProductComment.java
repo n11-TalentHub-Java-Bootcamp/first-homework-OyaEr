@@ -3,9 +3,10 @@ package entity;
 import javax.persistence.*;
 import java.util.Date;
 
+
 @Entity
 @Table(name="URUN_YORUM")
-public class UrunYorum {
+public class ProductComment {
 
     @SequenceGenerator(name = "generator", sequenceName = "URUN_YORUM_ID_SEQ")
     @Id
@@ -14,10 +15,11 @@ public class UrunYorum {
     private Long id;
 
     @Column(name="YORUM", nullable = false, length = 500)
-    private String yorum;
+    private String comment;
 
     @Temporal(TemporalType.DATE)
-    private Date yorumTarihi;
+    @Column(name="YORUM_TARIHI", nullable = false, length = 500)
+    private Date commentDate;
 
     public Long getId() {
         return id;
@@ -27,29 +29,30 @@ public class UrunYorum {
         this.id = id;
     }
 
-    public String getYorum() {
-        return yorum;
+    public String getComment() {
+        return comment;
     }
 
-    public void setYorum(String yorum) {
-        this.yorum = yorum;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
-    public Date getYorumTarihi() {
-        return yorumTarihi;
+    public Date getCommentDate() {
+        return commentDate;
     }
 
-    public void setYorumTarihi(Date yorumTarihi) {
-        this.yorumTarihi = yorumTarihi;
+    public void setCommentDate(Date commentDate) {
+        this.commentDate = commentDate;
     }
+
 
 
     @Override
     public String toString() {
         return "UrunYorum{" +
                 "id=" + id +
-                ", yorum='" + yorum + '\'' +
-                ", yorumTarihi=" + yorumTarihi +
+                ", yorum='" + comment + '\'' +
+                ", yorumTarihi=" + commentDate +
                 '}';
     }
 
