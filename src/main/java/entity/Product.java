@@ -1,10 +1,9 @@
 package entity;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
+//Derste yapılmış olan Ürün Entity'si.
 @Entity
 @Table(name = "URUN")
 public class Product {

@@ -1,8 +1,9 @@
 package entity;
-
 import javax.persistence.*;
 import java.util.Date;
 
+
+//UrunYorum için oluşturulmuş entity.
 @Entity
 @Table(name="URUN_YORUM")
 public class ProductComment {

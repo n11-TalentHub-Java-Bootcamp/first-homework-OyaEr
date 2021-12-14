@@ -1,6 +1,8 @@
 package entity;
 import javax.persistence.*;
 
+//Derste yapılmış olan Kategori Entity'si.
+
 @Entity
 @Table(name = "KATEGORI")
 public class Category {

@@ -1,7 +1,8 @@
 package entity;
-
 import javax.persistence.*;
 
+
+//Kullanıcı için oluşturulmuş entity.
 @Entity
 @Table(name="KULLANICI")
 public class User {
