@@ -1,8 +1,9 @@
 package applications;
 import dto.UserCommentDetailDto;
 import entityService.ProductCommentEntityService;
-
 import java.util.List;
+
+//Bu class içerisinde bir kullanıcının yapmış olduğu yorumlar listelenip,gösterilecektir.
 
 public class UserCommentListApp {
     public static void main(String[] args) {

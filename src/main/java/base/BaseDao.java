@@ -1,5 +1,4 @@
 package base;
-
 import hibernate.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

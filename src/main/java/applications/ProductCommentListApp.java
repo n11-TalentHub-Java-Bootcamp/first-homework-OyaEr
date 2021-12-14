@@ -1,10 +1,9 @@
 package applications;
-
-import dto.ProductCommentCountDetailDto;
 import dto.ProductCommentDetailDto;
 import entityService.ProductCommentEntityService;
-
 import java.util.List;
+
+//Bu class içerisinde ürünlere yapılan yorumların listelenmiş hali gösterilecektir.
 
 public class ProductCommentListApp {
     public static void main(String[] args) {

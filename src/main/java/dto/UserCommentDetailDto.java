@@ -1,7 +1,7 @@
 package dto;
-
-import java.math.BigDecimal;
 import java.util.Date;
+
+//Bu class bir kullanıcının yorumlarının DTO'su için yazılmıştır.
 
 public class UserCommentDetailDto {
 

@@ -1,11 +1,11 @@
 package entityService;
-
 import dao.ProductCommentDao;
 import dto.ProductCommentCountDetailDto;
 import dto.ProductCommentDetailDto;
 import dto.UserCommentDetailDto;
-
 import java.util.List;
+
+//UrunYorum entity'sine ait service class'ı.
 
 public class ProductCommentEntityService {
 
