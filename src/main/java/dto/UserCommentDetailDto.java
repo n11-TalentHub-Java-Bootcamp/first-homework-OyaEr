@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class UserCommentDetailDto {
 
-    private String userId;
+    private Long userId;
     private String userName;
     private String productName;
     private String comment;
     private Date commentDate;
 
-    public UserCommentDetailDto(String userId, String userName, String productName, String comment, Date commentDate) {
+    public UserCommentDetailDto(Long userId, String userName, String productName, String comment, Date commentDate) {
         this.userId = userId;
         this.userName = userName;
         this.productName = productName;
@@ -19,11 +19,11 @@ public class UserCommentDetailDto {
         this.commentDate = commentDate;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

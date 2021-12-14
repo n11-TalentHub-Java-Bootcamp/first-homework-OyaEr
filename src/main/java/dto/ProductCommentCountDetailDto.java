@@ -4,23 +4,23 @@ import java.math.BigDecimal;
 
 public class ProductCommentCountDetailDto {
 
-    private String productId;
+    private Long productId;
     private String productName;
     private BigDecimal price;
     private Long commentCount;
 
-    public ProductCommentCountDetailDto(String productId, String productName, BigDecimal price, Long commentCount) {
+    public ProductCommentCountDetailDto(Long productId, String productName, BigDecimal price, Long commentCount) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
         this.commentCount = commentCount;
     }
 
-    public String getProductId() {
+    public Long getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(Long productId) {
         this.productId = productId;
     }
 
